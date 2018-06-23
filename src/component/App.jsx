@@ -1,8 +1,10 @@
+/*导入指定jsx文件的默认export组件React 以及其他组件Component（记得{Component}格式）*/
 import React, {Component} from 'react'
-import {NavLink, Switch, Route, Redirect} from 'react-router-dom'
+import {Redirect, Route, Switch} from 'react-router-dom'
 
-import About from '../view/about'
-import Home from '../view/home'
+import MyNavLink from './MyNavLink'
+import About from '../views/about'
+import Home from '../views/home'
 
 export default class App extends Component {
     render() {
@@ -18,8 +20,8 @@ export default class App extends Component {
                     <div className="col-xs-2 col-xs-offset-2">
                         <div className="list-group">
                             {/*路由链接，用于切换路由组件的链接*/}
-                            <NavLink className='list-group-item' to='/about'>About</NavLink>
-                            <NavLink className='list-group-item' to='/home'>Home</NavLink>
+                            <MyNavLink className='list-group-item' to='/about'>About</MyNavLink>
+                            <MyNavLink className='list-group-item' to='/home'>Home</MyNavLink>
                         </div>
                     </div>
 
